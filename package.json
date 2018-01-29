@@ -1,0 +1,23 @@
+{
+  "name": "fib-pug",
+  "version": "0.0.1",
+  "description": "pug run in fibjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fibjs/fib-pug.git"
+  },
+  "keywords": [
+    "fibjs",
+    "pug"
+  ],
+  "author": "Chen Lei <richardo2016@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fibjs/fib-pug/issues"
+  },
+  "homepage": "https://github.com/fibjs/fib-pug#readme"
+}
