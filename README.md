@@ -5,6 +5,11 @@
 
 [pugjs] is one popular js template engine formerly known as "Jade". It's indentation-sensitive with high-performance. But at some point, it could only run in nodejs (some version of "Jade" can run in browser), because from that point [pugjs] support APIs such as `renderFile` which required I/O runtime.
 
+## Usage
+```bash
+npm i -S fib-pug
+```
+
 ## I/O
 As of `fs` module, luckily, fibjs has similar API with nodejs, we can run pugjs in fibjs, just do some magic hack with fibjs's `sandbox` module.
 
