@@ -19,5 +19,12 @@
   "bugs": {
     "url": "https://github.com/fibjs/fib-pug/issues"
   },
-  "homepage": "https://github.com/fibjs/fib-pug#readme"
+  "homepage": "https://github.com/fibjs/fib-pug#readme",
+  "tested": {
+    "fibjs": "0.21.1",
+    "pug": "2.0.0-rc.4"
+  },
+  "dependencies": {
+    "pug": "^2.0.0-rc.4"
+  }
 }
