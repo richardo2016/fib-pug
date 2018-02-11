@@ -4,6 +4,7 @@ var test = require('test');
 test.setup();
 
 const fs = require('fs')
+const path = require('path')
 
 const pug = require('../')
 
@@ -22,7 +23,7 @@ describe('测试 pug.compile', () => {
   })
 
   it('测试另一段从文件里读取的 raw text', () => {
-    const pugRaw = fs.readTextFile('./fib-pug.1.pug')
+    const pugRaw = fs.readTextFile(path.join(__dirname, './fib-pug.1.pug'))
     const html = pug.compile(pugRaw)()
     assert.equal('<div>我是一个 pug 文件, 在 fibjs 的驱动下跑 pug 包.</div>', html);
   })
@@ -36,7 +37,7 @@ describe('测试 pug.render', () => {
   })
 
   it('测试另一段从文件里读取的 raw text', () => {
-    const pugRaw = fs.readTextFile('./fib-pug.1.pug')
+    const pugRaw = fs.readTextFile(path.join(__dirname, './fib-pug.1.pug'))
     const html = pug.render(pugRaw)
     assert.equal('<div>我是一个 pug 文件, 在 fibjs 的驱动下跑 pug 包.</div>', html);
   })
@@ -44,7 +45,7 @@ describe('测试 pug.render', () => {
 
 describe('测试 pug.renderFile', () => {
   it('basic', () => {
-    const html = pug.renderFile('./fib-pug.1.pug')
+    const html = pug.renderFile(path.join(__dirname, './fib-pug.1.pug'))
     assert.equal('<div>我是一个 pug 文件, 在 fibjs 的驱动下跑 pug 包.</div>', html);
   })
 })
