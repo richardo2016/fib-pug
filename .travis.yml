@@ -1,0 +1,6 @@
+language: node_js
+node_js: '8'
+env:
+script:
+  - curl -s http://fibjs.org/download/installer.sh|sh
+  - npm run test
