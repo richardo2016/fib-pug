@@ -4,8 +4,9 @@
   "description": "pug run in fibjs",
   "main": "index.js",
   "scripts": {
-    "pretest": "rm -rf test/**/*.html",
-    "test": "fibjs test/index.spec.js"
+    "pretest": "npm run clean:test",
+    "test": "fibjs test/index.spec.js",
+    "clean:test": "rm -rf test/**/*.html"
   },
   "repository": {
     "type": "git",
@@ -32,6 +33,7 @@
     "pug": "^2.0.0-rc.4"
   },
   "devDependencies": {
+    "jstransformer-stylus": "^1.5.0",
     "jstransformer-typescript": "^1.1.0"
   }
 }
