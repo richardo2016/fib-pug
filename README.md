@@ -1,5 +1,9 @@
 # fib-pug
 
+[![Build Status](https://travis-ci.org/richardo2016/fib-pug.svg?branch=master)](https://travis-ci.org/richardo2016/fib-pug)
+[![NPM version](https://img.shields.io/npm/v/fib-pug.svg)](https://www.npmjs.org/package/fib-pug)
+
+
 [pugjs]:https://github.com/pugjs/pug
 [semver]:https://www.npmjs.com/package/semver
 
@@ -15,10 +19,6 @@ As of `fs` module, luckily, fibjs has similar API with nodejs, we can run pugjs 
 
 ## Mechanism
 ```javascript
-/**
- * only test in fibjs 0.21 and pug@2.0.0-rc.4
- *
- */
 const vm = require('vm');
 const sbox = new vm.SandBox({
   fs: require('fs'),
@@ -66,3 +66,15 @@ try {
 
 console.log(html) // '<div>测试变量</div>'
 ```
+
+## Specical Features
+
+### Filters
+[jstransformer-stylus]:https://www.npmjs.com/package/jstransformer-stylus
+[jstransformer-typescript]:https://www.npmjs.com/package/jstransformer-typescript
+
+If you don't know about this feature, learn more about it [here](https://pugjs.org/language/filters.html)
+
+`pug` takes `jstransformer-*`-like packages(such as [jstransformer-stylus]) as default filter. That is, if you write `:stylus` in pug, it would try to find `jstransformer-stylus` in nodejs's common pattern.
+
+Some `jstransformer-*`-like packages may be incompatible with fibjs, You can also customize filter as you like. View more sample usages for **filter** [here](/test/filters)
