@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "pretest": "npm run clean:test",
+    "ci": "fibjs test/index.spec.js",
     "test": "fibjs test/index.spec.js",
     "clean:test": "rm -rf test/**/*.html"
   },
@@ -22,17 +23,20 @@
     "url": "https://github.com/fibjs/fib-pug/issues"
   },
   "homepage": "https://github.com/fibjs/fib-pug#readme",
-  "tested": {
-    "fibjs": [
+  "ci": {
+    "type": "travis",
+    "version": [
       "0.21.0",
-      "0.22.0"
-    ],
-    "pug": "2.0.0-rc.4"
+      "0.22.0",
+      "0.23.0",
+      "0.24.0"
+    ]
   },
   "dependencies": {
     "pug": "^2.0.0-rc.4"
   },
   "devDependencies": {
+    "@fibjs/ci": "^2.0.0",
     "jstransformer-stylus": "^1.5.0",
     "jstransformer-typescript": "^1.1.0"
   }
